@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Click on the **link below** to view the **demo** of the project :
+
+https://todo-list-react-firebase.netlify.app/
+
+## Firebase Configurations
+You can statically edit your firebase configuration in "./src/firebase/index.js" file.
+
+Or You can set react environment variables when starting or building the app. It will automatically set your configurations. You can read detailed information about it from the link below.
+
+https://create-react-app.dev/docs/adding-custom-environment-variables/
+
+### Firestore
+
+* Create collection named 'todo'.
+* Also, you need to create index to pull data sorted by timestamp(createdAt). You can do it on Firestore>Indexes>Composite tab.
+
 ## Available Scripts
 
 In the project directory, you can run:
