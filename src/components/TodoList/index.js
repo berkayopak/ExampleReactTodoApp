@@ -11,7 +11,6 @@ import './todoList.scss';
 
 function TodoList(props) {
     const [todoList, setTodoList] = useState([]);
-    const [show, setShow] = useState(false);
 
     useEffect(() => {
         if(props.todo.syncStatus === syncStates.SYNCED){
