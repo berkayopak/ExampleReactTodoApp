@@ -26,7 +26,7 @@ function SignIn(props) {
                         <Form onSubmit={signIn}>
                             <Form.Group controlId="formUsername">
                                 <Form.Label>Username (*)</Form.Label>
-                                <Form.Control type="text" placeholder="Enter username" required pattern="^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$"/>
+                                <Form.Control type="text" placeholder="Enter username" required pattern="^(?=[a-zA-Z0-9._]{2,20}$)(?!.*[_.]{2})[^_.].*[^_.]$"/>
                             </Form.Group>
 
                             <Form.Group controlId="formFirstName">
