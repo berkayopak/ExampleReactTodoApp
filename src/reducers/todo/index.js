@@ -37,7 +37,7 @@ const todoReducer = (state = initialTodoState, action) => {
             const updatedTodoList = [...state.todoList, action.payload.todo];
             return {...state, todoList: updatedTodoList};
         case EDIT_TODO_ACTION:
-            state.todoList.filter(todo => todo.id == action.payload.todo.id)[0].description = action.payload.todo.description;
+            state.todoList.filter(todo => todo.id === action.payload.todo.id)[0].description = action.payload.todo.description;
             return {...state};
         case DELETE_TODO_ACTION:
             state.todoList = state.todoList.filter(todo => todo.id !== action.payload.todo.id);

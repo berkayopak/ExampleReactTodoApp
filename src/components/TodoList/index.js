@@ -41,12 +41,12 @@ function TodoList(props) {
     }
 
     function editTodoItem(todoItemId) {
-        const editedItem = todoList.filter(item => item.id == todoItemId)[0];
+        const editedItem = todoList.filter(item => item.id === todoItemId)[0];
         props.dispatch(editTodo(editedItem));
     }
 
     function deleteTodoItem(todoItemId) {
-        const deletedItem = todoList.filter(item => item.id == todoItemId)[0];
+        const deletedItem = todoList.filter(item => item.id === todoItemId)[0];
         props.dispatch(deleteTodo(deletedItem));
     }
 
