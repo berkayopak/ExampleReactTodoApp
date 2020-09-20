@@ -25,6 +25,8 @@ import {
     getAllTodoItems
 } from "../../firebase/firestore";
 
+import {USER_STATE_NAME} from "../../helper";
+
 export function login(user) {
     return dispatch => {
         if(user && user.username && user.firstName) {
@@ -36,7 +38,12 @@ export function login(user) {
                     lastName: user.lastName
                 };
 
-                localStorage.setItem('userState', JSON.stringify({user: userState, loggedIn: true}));
+                localStorage.setItem(USER_STATE_NAME, JSON.stringify({
+                    user: userState,
+                    loggedIn: true,
+                    loginError: false,
+                    loginErrorMessage: ''
+                }));
 
                 dispatch({
                     type: LOGIN_ACTION,
@@ -53,7 +60,7 @@ export function login(user) {
 }
 
 export function logout() {
-    localStorage.removeItem('userState');
+    localStorage.removeItem(USER_STATE_NAME);
     return dispatch => {
         dispatch({type: LOGOUT_ACTION});
         dispatch({type: CLEAR_TODO_LIST_ACTION});

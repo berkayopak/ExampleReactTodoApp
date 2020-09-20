@@ -1,6 +1,7 @@
 import {LOGIN_ACTION, LOGOUT_ACTION, LOGIN_ERROR_ACTION} from '../../actions/types'
+import {USER_STATE_NAME} from "../../helper";
 
-const localStorageUserJSON = localStorage.getItem('userState');
+const localStorageUserJSON = localStorage.getItem(USER_STATE_NAME);
 const localStorageUser = JSON.parse(localStorageUserJSON);
 
 const noUserState = {
