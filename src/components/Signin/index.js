@@ -8,8 +8,6 @@ import { Redirect } from "react-router";
 
 
 function SignIn(props) {
-    console.log(process.env.FIREBASE_PROJECT_ID,"APP");
-
     function signIn(e){
         e.preventDefault();
         const user = {

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {connect} from 'react-redux';
-import {Alert, Button, Col, Form, Spinner, Toast} from "react-bootstrap";
+import {Alert, Button, Col, Form, Spinner} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {addTodo, deleteTodo, editTodo, loadTodoList, syncIdle} from "../../actions/functions";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";

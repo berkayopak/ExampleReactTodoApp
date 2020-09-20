@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import {logout} from "../../actions/functions";
 import {Nav, Navbar, Form, Button, Badge} from "react-bootstrap";
