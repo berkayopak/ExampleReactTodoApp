@@ -1,0 +1,19 @@
+.middle-page{
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+
+  .card{
+    width: 17%;
+    .card-body{
+      input{
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .login-error-message{
+    width: 100%;
+  }
+}

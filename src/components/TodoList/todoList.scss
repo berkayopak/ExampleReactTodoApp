@@ -1,0 +1,15 @@
+.fixed-notifications{
+  position: fixed;
+  right: 1.5%;
+  bottom: 0;
+  z-index: 5;
+  .alert{
+    min-width: 250px;
+    min-height: 150px;
+    max-width:320px;
+    .syncing-spinner{
+      display: inline-block;
+      margin-top: 18%;
+    }
+  }
+}
