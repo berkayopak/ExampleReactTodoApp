@@ -6,6 +6,8 @@
 
   .card{
     width: 17%;
+    min-width: 300px;
+    max-width: 500px;
     .card-body{
       input{
         width: 100%;
