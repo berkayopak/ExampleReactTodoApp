@@ -19,6 +19,8 @@ export function getAllTodoItems(user) {
                 todoList.push(todoItem);
             });
             resolve(todoList)
+        }).catch(function (err) {
+            reject(err);
         });
     });
 }
@@ -43,11 +45,11 @@ export function addTodoItemToCollection(todo, user) {
     });
 }
 
-export function editTodoItemFromCollection(todo, user) {
+export function editTodoItemFromCollection(todo) {
     return new Promise(function (resolve, reject) {
         const todosCollection = db.collection(collectionName);
 
-        const updateResult = todosCollection.doc(todo.id).update({
+        todosCollection.doc(todo.id).update({
             description: todo.description,
             modifiedAt: firebase.firestore.FieldValue.serverTimestamp()
         }).then(function () {

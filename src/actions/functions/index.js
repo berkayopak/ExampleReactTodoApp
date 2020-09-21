@@ -147,7 +147,7 @@ export function deleteTodo(todo) {
     }
 }
 
-export function editTodo(todo, user) {
+export function editTodo(todo) {
     return dispatch => {
         dispatch({
             type: EDIT_TODO_ACTION,
@@ -158,7 +158,7 @@ export function editTodo(todo, user) {
         dispatch({
             type: SYNC_TODO_LIST_REQUEST_ACTION
         });
-        editTodoItemFromCollection(todo, user).then(function (res) {
+        editTodoItemFromCollection(todo).then(function (res) {
             dispatch({
                 type: SYNC_TODO_LIST_SUCCESS_ACTION
             });

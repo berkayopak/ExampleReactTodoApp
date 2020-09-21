@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import {logout} from "../../actions/functions";
-import {Nav, Navbar, Form, Button, Badge} from "react-bootstrap";
+import {Nav, Navbar, Button} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faUser} from '@fortawesome/free-solid-svg-icons'
